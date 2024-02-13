@@ -156,8 +156,8 @@ MubFrame.FrequencyEnum = {
 	["three"] 	=	{  value = 3  },
 	["four"] 	=	{  value = 4  },
 	["five"] 	= 	{  value = 5  },
-	["six"] 	=   {  value = 6  },
-	["seven"] 	=   {  value = 7  },
+	["six"] 	= 	{  value = 6  },
+	["seven"] 	=	{  value = 7  },
 	["eight"] 	= 	{  value = 8  },
 	["nine"] 	= 	{  value = 9  }
 }
