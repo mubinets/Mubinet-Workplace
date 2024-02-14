@@ -92,9 +92,9 @@ MubFrame.RandomStringGenerator = RandomStringGenerator
 -------------------------------------------------------------
 
 --[[
-	@param length		number					|	How long should the string be generated
+	@param length		number				|	How long should the string be generated
 	@param parameter	RandomStringParam?		|   THe parameter to generate the string
-	@return string								|   The generated string
+	@return string						|   The generated string
 --]]
 
 function RandomStringGenerator.new()
