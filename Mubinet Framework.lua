@@ -92,9 +92,9 @@ MubFrame.RandomStringGenerator = RandomStringGenerator
 -------------------------------------------------------------
 
 --[[
-	@param length		number				|	How long should the string be generated
+	@param length		number					|	How long should the string be generated
 	@param parameter	RandomStringParam?		|   THe parameter to generate the string
-	@return string						|   The generated string
+	@return string								|   The generated string
 --]]
 
 function RandomStringGenerator.new()
@@ -116,15 +116,15 @@ function MetatableRandomStringGenerator:generateRandomString(length : number, pa
 	local result : string = ""
 	
 	if (parameter) then
-		numberProbability = (parameter.numberFrequency.value / 10)
-		symbolProbability = (parameter.symbolFrequency.value / 10)
-		stringProbability = (parameter.stringFrequency.value / 10)
+		numberProbability = ( (parameter.numberFrequency and parameter.numberFrequency.value or 1) / 10)
+		symbolProbability = ( (parameter.symbolFrequency and parameter.symbolFrequency.value or 1) / 10)
+		stringProbability = ( (parameter.stringFrequency and parameter.stringFrequency.value or 1) / 10)
 	end
 	
 	for lengthCount = 0, length, 1 do
 		local random_number = math.random()
 		
-		if (random_number < numberProbability) and parameter.includeNumber then
+		if (random_number < numberProbability and parameter.includeNumber) then
 			-- Generate random number
 			result = result .. _MubFrame._RandomStringGenerator:generateRandomNumber()
 		elseif (random_number < numberProbability + stringProbability) then
@@ -156,8 +156,8 @@ MubFrame.FrequencyEnum = {
 	["three"] 	=	{  value = 3  },
 	["four"] 	=	{  value = 4  },
 	["five"] 	= 	{  value = 5  },
-	["six"] 	= 	{  value = 6  },
-	["seven"] 	=	{  value = 7  },
+	["six"] 	=   {  value = 6  },
+	["seven"] 	=   {  value = 7  },
 	["eight"] 	= 	{  value = 8  },
 	["nine"] 	= 	{  value = 9  }
 }
